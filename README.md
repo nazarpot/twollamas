@@ -1,6 +1,6 @@
 # 2llamas
 
-##Running a .sh file
+## Running a .sh file
 
 ./[file name] parameters
 
