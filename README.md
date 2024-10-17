@@ -1,5 +1,16 @@
 # 2llamas
 
+## What are the expand files?
+expand is for mac
+expand.exe is for windows
+expand.go is the source code
+
+### On Mac
+./expand [params]
+
+### On Windows
+expand.exe [params]
+
 ## Before running a .sh file for the first time
 You will need to add persmission to execute the files. execute the
 following code:
