@@ -7,10 +7,20 @@ Take input:
 * w = Weight
 * r = Rate
 * t = Temperature
+* o = "on" the date
 
 expand takes such params (any number) and converts to a more readable
 format. It also automatically adds to clipboard, so you can past it 
 wherever needed.
+
+Format converted into(ex):
+Pick up: 12:00
+Drop off: 12:00
+Weight: 30k lbs
+Rate: $4 per mile
+Temperature: 32°
+10/23/2024
+
 
 ##### OS specifics
 expand is for mac

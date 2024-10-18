@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"time"
+	"strconv"
 	"golang.design/x/clipboard"
 )
 
@@ -20,25 +22,44 @@ func processer(input string) string {
 	var v = input[0]
 	switch v {
 	case 'p':
-		var stmt = "Pick up: " + input[1:]
+		min := input[len(input) - 2:]
+		hr := input[1:len(input) - 2]
+		time := hr + ":" + min
+		var stmt = "Pick up: " + time
 		fmt.Println(stmt)
 		output = output + stmt + "\n"
 	case 'd':
-		var stmt = "Drop off: " + input[1:]
+		min := input[len(input) -2:]
+		hr := input[1:len(input) - 2]
+		time := hr + ":" + min
+		var stmt = "Drop off: " + time
 		fmt.Println(stmt)
 		output = output + stmt + "\n"
 	case 'w':
-		stmt := "Weight: " + input[1:]
+		stmt := "Weight: " + input[1:] + " lbs"
 		fmt.Println(stmt)
 		output = output + stmt + "\n"
 	case 'r':
-		stmt := "Rate: " + input[1:]
+		stmt := "Rate: " + "$" + input[1:] + " per mile"
 		fmt.Println(stmt)
 		output = output + stmt + "\n"
 	case 't':
-		stmt := "Temperature: " + input[1:]
+		stmt := "Temperature: " + input[1:] + "°"
 		fmt.Println(stmt)
 		output = output + stmt + "\n"
+	case 'o':
+		month := input[1:3]
+		day := input[3:5]
+		var year string
+		if len(input) == 5 {
+			t := time.Now()
+			year = strconv.Itoa(t.Year())
+		} else {
+			year = input[6:]
+		}
+		date := month + "/" + day + "/" + year
+		fmt.Println(date)
+		output = output + date + "\n"
 	}
 	return output
 }
