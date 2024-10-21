@@ -13,7 +13,10 @@ expand takes such params (any number) and converts to a more readable
 format. It also automatically adds to clipboard, so you can past it 
 wherever needed.
 
-Format converted into(ex):
+### Format converted into(ex):
+input: p1200 d1200 w30k r4 t32 o1023
+
+output:
 Pick up: 12:00
 Drop off: 12:00
 Weight: 30k lbs
@@ -32,14 +35,14 @@ expand.go is the source code
 
 example:
 ```
-./expand p1200 d1200 w2000 r0.50 t32
+./expand p1200 d1200 w2000 r0.50 t32 o1023
 ```
 ### On Windows
 expand.exe [params]
 
 example:
 ```
-expand.exe p1200 d1200 w2000 r0.50 t32
+expand.exe p1200 d1200 w2000 r0.50 t32 o1023
 ```
 
 ## Before running a .sh file for the first time
